@@ -1,0 +1,182 @@
+/* GRNERICOS */
+body {
+    background-color: white;
+    color: black;
+    /*font-family: 'Open Sans', sans-serif;*/
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+i {
+    margin-right: 1rem;
+    color: black;
+}
+.box-shadow-1 {
+    box-shadow: 10px 10px 5px grey; 
+}
+
+.box-shadow-2 {
+    box-shadow: 0 3px 2px rgb(43, 42, 42);  
+}
+
+/*MENUS*/
+.nav-menu {
+    display: none;
+}
+
+.nav-icon {
+    position: fixed;
+    z-index: 1;
+    font-weight: 800;
+    font-size: 1rem;
+    top: 1rem;
+    left: 1rem;
+}
+
+/* SECCIONES */
+section.home header {
+    position: relative;
+    height: 100vh;
+    background: url(../assets/desarrollando-web.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+}
+
+section .content-wrapper {
+    width: 95%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 2rem;
+}
+
+section .title-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 95%;
+    height: 15vh;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 2rem;
+    background-color: darkcyan;
+}
+
+.title-wrapper h1 {
+    font-size: 2.5rem;
+    color: white;
+}
+
+#who-am-i div.personal-data {
+    display: flex;
+    flex-direction: column;
+}
+#who-am-i ul {
+    list-style: none;
+}
+
+#who-am-i li {
+    display: flex;
+    margin-top: 1rem;
+}
+
+#who-am-i div.personal-description p {
+    margin-top: 1rem;
+}
+
+.kc-link {
+    background-color: gray;
+    color: white;
+    font-weight: 800;
+}
+
+#academic-background div.content-wrapper p {
+    margin-top: 1rem;
+}
+
+#job-experience p>em {
+    background-color: lightblue;
+}
+table.job-experience {
+    width: 100%;
+}
+
+table.job-experience td {
+    padding-top: 1rem;
+    vertical-align: top;
+}
+
+table.job-experience td:nth-child(2){
+    text-align: end;
+}
+
+#contact div.data-icons ul {
+    list-style: none;
+    padding: 0;
+}
+
+footer .footer-wrapper {
+    margin-top: 2rem;
+    text-align: center;
+}
+
+@media screen and (min-width: 900px) {
+
+    .nav-icon {
+        display: none;
+    }
+
+    .nav-menu {
+        display: flex;
+    }
+    
+    .nav-menu {
+        position: fixed;
+        z-index: 1;
+        font-weight: 800;
+        font-size: 1rem;
+        top: 0;
+        right: 0;
+        left: 0;
+        justify-content: center;
+        color: white;
+        background-color: rgba(0,0,0,.5);
+    }
+    
+    .nav-menu li {
+        display: inline-block;
+        padding: 0.5rem 1rem;
+        transition: all 0.4s linear;
+    }
+    
+    .nav-menu a {
+        display: block;
+        padding: .5rem 1rem
+    }
+    
+    .nav-menu a:hover {
+        background-color: antiquewhite;
+        color: darkblue;
+        transform: scale(1.2);
+    }
+
+    .content-wrapper {
+        width: 75%;
+        max-width: 50rem;
+    }
+
+    .title-wrapper {
+        width: 75%;
+        max-width: 50rem;
+    }
+
+    
+    #who-am-i div.personal-data {
+        flex-direction: row;
+    }
+
+    #contact div.data-icons ul {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+    }
+
+}   
