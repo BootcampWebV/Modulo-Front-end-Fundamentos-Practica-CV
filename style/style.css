@@ -78,7 +78,7 @@ section .title-wrapper {
     margin-top: 1rem;
 }
 
-#who-am-i div.personal-description p {
+.content-wrapper p {
     margin-top: 1rem;
 }
 
@@ -88,11 +88,7 @@ section .title-wrapper {
     font-weight: 800;
 }
 
-#academic-background div.content-wrapper p {
-    margin-top: 1rem;
-}
-
-#job-experience p>em {
+#job-experience em {
     background-color: lightblue;
 }
 table.job-experience {
