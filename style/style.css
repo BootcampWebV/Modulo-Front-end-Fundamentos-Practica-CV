@@ -109,9 +109,33 @@ table.job-experience td:nth-child(2){
     padding: 0;
 }
 
+#about-me figure.video {
+    margin: 1rem 0 0 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+#about-me figure.video iframe{
+    width: 250px;
+    height: 141px;
+}
+
+#about-me figure.image {
+    width: 33%;
+    float: left;
+}
+
+
 footer .footer-wrapper {
     margin-top: 2rem;
     text-align: center;
+}
+
+@media screen and (min-width: 700px) {
+    figure.video iframe{
+        width: 560px;
+        height: 315px;
+        box-shadow: 10px 10px 5px grey;
 }
 
 @media screen and (min-width: 900px) {
