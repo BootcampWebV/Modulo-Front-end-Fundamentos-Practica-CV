@@ -2,12 +2,12 @@
 body {
     background-color: white;
     color: black;
-    /*font-family: 'Open Sans', sans-serif;*/
-    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-family: 'Open Sans', sans-serif;
+    /*font-family: Georgia, 'Times New Roman', Times, serif;*/
 }
 i {
     margin-right: 1rem;
-    color: black;
+    color: rgb(54, 52, 52);
 }
 .box-shadow-1 {
     box-shadow: 10px 10px 5px grey; 
@@ -121,8 +121,12 @@ table.job-experience td:nth-child(2){
 }
 
 #about-me figure.image {
-    width: 33%;
+    width: 25%;
     float: left;
+}
+
+div.clear-fix {
+    clear: both;
 }
 
 
@@ -132,7 +136,7 @@ footer .footer-wrapper {
 }
 
 @media screen and (min-width: 700px) {
-    figure.video iframe{
+    #about-me figure.video iframe{
         width: 560px;
         height: 315px;
         box-shadow: 10px 10px 5px grey;
