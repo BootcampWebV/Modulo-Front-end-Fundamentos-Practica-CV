@@ -132,16 +132,6 @@ table.job-experience td:nth-child(2){
     height: 141px;
 }
 
-#about-me figure.image {
-    width: 25%;
-    float: left;
-}
-
-div.clear-fix {
-    clear: both;
-}
-
-
 footer .footer-wrapper {
     margin-top: 2rem;
     text-align: center;
@@ -245,6 +235,20 @@ footer .footer-wrapper {
     
     #who-am-i div.personal-data {
         flex-direction: row;
+    }
+
+    #about-me figure.image {
+        width: 40%;
+        float: left;
+    }
+    
+    #about-me figure.image-2 {
+        width: 40%;
+        float: left;
+    }
+    
+    div.clear-fix {
+        clear: both;
     }
 
     #contact div.data-icons ul {
