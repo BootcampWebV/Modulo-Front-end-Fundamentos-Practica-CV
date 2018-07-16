@@ -77,6 +77,10 @@ section .title-wrapper {
     color: white;
 }
 
+.content-wrapper p {
+    margin-top: 1rem;
+}
+
 #who-am-i div.personal-data {
     display: flex;
     flex-direction: column;
@@ -87,10 +91,6 @@ section .title-wrapper {
 
 #who-am-i li {
     display: flex;
-    margin-top: 1rem;
-}
-
-.content-wrapper p {
     margin-top: 1rem;
 }
 
@@ -116,20 +116,49 @@ table.job-experience td:nth-child(2){
     text-align: end;
 }
 
-#contact div.data-icons ul {
-    list-style: none;
-    padding: 0;
-}
-
 #about-me figure.video {
     margin: 1rem 0 0 0;
     display: flex;
     flex-direction: column;
     align-items: center;
 }
+
 #about-me figure.video iframe{
     width: 250px;
     height: 141px;
+}
+
+#contact .content-wrapper p:nth-of-type(1) {
+    margin-top: 3rem;
+    margin-bottom: 2rem;
+}
+
+li.form-group {
+    padding-top: 2rem;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid grey;
+}
+
+li.form-group input, li.form-group select, li.form-group textarea {
+    width: 100%;
+    border: 0 solid;
+    font-size: 1.5rem;
+    font-family: 'Lora', serif;
+    color:  grey;
+}
+
+li.form-group textarea {
+    resize: none;
+}
+
+.send-button {
+    font-size: 1.5rem;
+    margin-top: 1rem;
+}
+
+#contact div.data-icons ul {
+    list-style: none;
+    padding: 0;
 }
 
 footer .footer-wrapper {
@@ -159,14 +188,14 @@ footer .footer-wrapper {
     h1.main-title-curriculum {
         left: 0;
         transform: translate(-100%, 0);
-        animation: offset-right 2s linear;
+        animation: offset-right 1s ease-out;
         animation-fill-mode: forwards;
     }
 
     h1.main-title-vitae {
         right: 0;
         transform: translate(100%,0);
-        animation: offset-left 2s linear;
+        animation: offset-left 1s ease-out;
         animation-fill-mode: forwards;
     }
 
@@ -213,7 +242,8 @@ footer .footer-wrapper {
     
     .nav-menu a {
         display: block;
-        padding: .5rem 1rem
+        padding: .5rem 1rem;
+        transition: all .5s ease;
     }
     
     .nav-menu a:hover {

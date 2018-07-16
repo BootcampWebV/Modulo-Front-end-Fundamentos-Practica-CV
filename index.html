@@ -264,6 +264,34 @@
                             <i class="fas fa-phone fa-2x"></i>660135919</li>
                     </ul>
                 </div>
+            <p>También puedes rellenar el formulario para ponerte en contacto conmigo:</p>
+            <form action="" id="form-contact">
+                <ul>
+                    <li class="form-group">
+                        <input type="text" class="name" id="name" placeholder="*Nombre (campo obligatorio)" required>
+                    </li>
+                    <li class="form-group">
+                        <input type="email" class="email" id="email" placeholder="Email"></li>
+                    <li class="form-group">
+                        <select name="fuente" id="fuente">
+                            <option value="google">Google+</option>
+                            <option value="github">GitHub</option>
+                            <option value="facebook">Facebook</option>
+                            <option value="terceras">Terceras personas</option>
+                            <option value="otros">Otros</option>
+                        </select>
+                    </li>
+                    <li class="form-group">
+                        <input type="tel" class="phone-number" id="phone-number" placeholder="Número de contacto">
+                    </li>
+                    <li class="form-group">
+                        <textarea rows="5" class="message" id="message" placeholder="Introduce aquí el mensaje (máx. 150 palabras)"></textarea>
+                    </li>
+                    <li>
+                        <button type="submit" class="send-button" id="send-button">Enviar</button>
+                    </li>
+                </ul>
+            </form>
             </div>
         </article>
     </section>
