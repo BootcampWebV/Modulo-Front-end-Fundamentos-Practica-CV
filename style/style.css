@@ -245,6 +245,11 @@ footer .footer-wrapper {
         padding: .5rem 1rem;
         transition: all .5s ease;
     }
+
+    a.active {
+        background-color: red;
+        color: yellow;
+    }
     
     .nav-menu a:hover {
         background-color: antiquewhite;
