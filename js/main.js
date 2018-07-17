@@ -1,42 +1,40 @@
 export class Main {
     constructor () {
-        // Elementos del DOM
         
+        // objetos del menu de navegacion y array con las cordenadas "y" de cada section
         this.aMenu = document.querySelectorAll("nav.nav-menu a");
         this.aSections = document.querySelectorAll('section');
         this.oOffsets = [];
+
+        // objetos de formulario
+        this.oFormContact = document.querySelector('#form-contact');
+        this.oInputName = document.querySelector('#name');
+        this.oInputEmail = document.querySelector('#email');
+        this.oSelectFuente = document.querySelector('#fuente');
+        this.oLiOtros = document.querySelector('#li-otros');
+        this.oInputOtros = document.querySelector('#otros');
+        this.oInputTel = document.querySelector('#phone-number');
+        this.oTextMessage = document.querySelector('#message');
     }
 
     defineEventListeners() {
         
+        // establece array oOffsets con los valores de las coordenadas "y" de cada section
         this.prepararNavegacion();
+        
+        // "scroll spy"
         window.addEventListener('scroll', this.offsetChangeStyle.bind(this));
 
-       document.querySelector('.link-to-h').addEventListener('click', (e) => {
-            e.preventDefault();
-            this.smoothScroll('home');
+        // "smooth scroll" para los pares enlaces menú /destinos section
+        this.aMenu.forEach( item => {
+            item.addEventListener('click', e => {
+                e.preventDefault();
+                this.smoothScroll(e.currentTarget.getAttribute('data-link-to'));
+            })
         });
-        document.querySelector('.link-to-wai').addEventListener('click', (e) => {
-            e.preventDefault();
-            this.smoothScroll('who-am-i');
-        });
-        document.querySelector('.link-to-ab').addEventListener('click', (e) => {
-            e.preventDefault();
-            this.smoothScroll('academic-background');
-        });
-        document.querySelector('.link-to-je').addEventListener('click', (e) => {
-            e.preventDefault();
-            this.smoothScroll('job-experience');
-        });
-        document.querySelector('.link-to-am').addEventListener('click', (e) => {
-            e.preventDefault();
-            this.smoothScroll('about-me');
-        });
-        document.querySelector('.link-to-c').addEventListener('click', (e) => {
-            e.preventDefault();
-            this.smoothScroll('contact');
-        });
-        
+
+        // eventos de formulario
+        this.oSelectFuente.addEventListener('change', this.toggleOtros.bind(this))
     }
 
     offsetChangeStyle() {
@@ -66,8 +64,7 @@ export class Main {
         this.aSections.forEach(
             (item) => {
                 let cumulative =  this.cumulativeOffset(item);
-                this.oOffsets['#'+item.id] = cumulative;
-                console.log(cumulative);
+                this.oOffsets['#'+item.id] = cumulative - 10;
             }
         )
     }
@@ -126,5 +123,14 @@ export class Main {
         }
     }
 
+    toggleOtros() {
+        if (this.oSelectFuente.value == 'otros') {
+            this.oLiOtros.classList.remove('hidden');
+            this.oInputOtros.focus();
+        }
+        else {
+            this.oLiOtros.classList.add('hidden');
+        }
+    }
 
 }

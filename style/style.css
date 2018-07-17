@@ -161,6 +161,10 @@ li.form-group textarea {
     padding: 0;
 }
 
+.hidden {
+    display: none;
+}
+
 footer .footer-wrapper {
     margin-top: 2rem;
     text-align: center;

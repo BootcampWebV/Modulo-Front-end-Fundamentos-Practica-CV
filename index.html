@@ -32,22 +32,22 @@
     <nav class="nav-menu box-shadow-2">
         <ul>
             <li>
-                <a href="./index.html#home" class="link-to-h">Home</a>
+                <a href="./index.html#home" data-link-to="home" >Home</a>
             </li>
             <li>
-                <a href="./index.html#who-am-i" class="link-to-wai">¿Quien soy?</a>
+                <a href="./index.html#who-am-i" data-link-to="who-am-i">¿Quien soy?</a>
             </li>
             <li>
-                <a href="./index.html#academic-background" class="link-to-ab">Formación</a>
+                <a href="./index.html#academic-background" data-link-to="academic-background">Formación</a>
             </li>
             <li>
-                <a href="./index.html#job-experience" class="link-to-je">Experiencia Laboral</a>
+                <a href="./index.html#job-experience" data-link-to="job-experience">Experiencia Laboral</a>
             </li>
             <li>
-                <a href="./index.html#about-me" class="link-to-am">Sobre mi</a>
+                <a href="./index.html#about-me" data-link-to="about-me">Sobre mi</a>
             </li>
             <li>
-                <a href="./index.html#contact" class="link-to-c">Contactame</a>
+                <a href="./index.html#contact" data-link-to="contact">Contactame</a>
             </li>
         </ul>
     </nav>
@@ -280,6 +280,9 @@
                             <option value="terceras">Terceras personas</option>
                             <option value="otros">Otros</option>
                         </select>
+                    </li>
+                    <li class="form-group hidden" id="li-otros">
+                        <input type="text" class="otros" id="otros" placeholder="Escribe aqui como me has conocido">
                     </li>
                     <li class="form-group">
                         <input type="tel" class="phone-number" id="phone-number" placeholder="Número de contacto">
