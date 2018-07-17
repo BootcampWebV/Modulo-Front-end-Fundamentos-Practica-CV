@@ -36,11 +36,30 @@ body>header {
 
 .nav-icon {
     position: fixed;
-    z-index: 1;
+    z-index: 2;
     font-weight: 800;
     font-size: 1rem;
     top: 1rem;
     left: 1rem;
+}
+
+.desplegado {
+    display: flex;
+    position: fixed;
+    z-index: 1;
+    flex-direction: column;
+    font-weight: 800;
+    font-size: 1.8rem;
+    left: 1rem;
+    top: 5rem;
+    justify-content: center;
+    color: white;
+    background-color: darkgrey;
+}
+
+a.active {
+    background-color: red;
+    color: yellow;
 }
 
 /* SECCIONES */
@@ -139,16 +158,20 @@ li.form-group {
     border-bottom: 1px solid grey;
 }
 
-li.form-group input, li.form-group select, li.form-group textarea {
+li.form-group input, li.form-group label, li.form-group select, li.form-group textarea {
     width: 100%;
     border: 0 solid;
     font-size: 1.5rem;
     font-family: 'Lora', serif;
-    color:  grey;
+    color: grey;
 }
 
 li.form-group textarea {
     resize: none;
+}
+
+select.fuente {
+    display: block;
 }
 
 .send-button {
@@ -220,12 +243,9 @@ footer .footer-wrapper {
     .nav-icon {
         display: none;
     }
-
-    .nav-menu {
-        display: flex;
-    }
     
     .nav-menu {
+        display: flex;
         position: fixed;
         z-index: 1;
         font-weight: 800;
@@ -249,12 +269,7 @@ footer .footer-wrapper {
         padding: .5rem 1rem;
         transition: all .5s ease;
     }
-
-    a.active {
-        background-color: red;
-        color: yellow;
-    }
-    
+   
     .nav-menu a:hover {
         background-color: antiquewhite;
         color: darkblue;

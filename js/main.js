@@ -15,6 +15,8 @@ export class Main {
         this.oInputOtros = document.querySelector('#otros');
         this.oInputTel = document.querySelector('#phone-number');
         this.oTextMessage = document.querySelector('#message');
+        this.oMenuIcon = document.querySelector('#nav-icon');
+        this.oNavMenu = document.querySelector('#nav-menu');
     }
 
     defineEventListeners() {
@@ -34,7 +36,10 @@ export class Main {
         });
 
         // eventos de formulario
-        this.oSelectFuente.addEventListener('change', this.toggleOtros.bind(this))
+        this.oSelectFuente.addEventListener('change', this.toggleOtros.bind(this));
+
+        // desplegar nav-icon
+        this.oMenuIcon.addEventListener('click', this.toggleMenu.bind(this));
     }
 
     offsetChangeStyle() {
@@ -131,6 +136,12 @@ export class Main {
         else {
             this.oLiOtros.classList.add('hidden');
         }
+    }
+
+    toggleMenu() {
+        this.oNavMenu.classList.toggle('desplegado');
+        this.oNavMenu.classList.toggle('nav-menu');
+        this.oNavMenu.classList.toggle('box-shadow-2');
     }
 
 }

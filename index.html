@@ -22,17 +22,17 @@
         <h1 class="main-title-vitae">VITAE</h1>
     </header>
 
-    <nav class="nav-icon">
+    <nav class="nav-icon" id="nav-icon">
         <!--<i id="menuBtn" class="fas fa-bars fa-2x"></i>-->
         <span class="fa-stack fa-2x">
             <i class="fas fa-square fa-stack-2x"></i>
             <i class="fas fa-bars fa-stack-1x fa-inverse"></i>
         </span>
     </nav>
-    <nav class="nav-menu box-shadow-2">
+    <nav class="nav-menu box-shadow-2" id="nav-menu">
         <ul>
             <li>
-                <a href="./index.html#home" data-link-to="home" >Home</a>
+                <a href="./index.html#home" data-link-to="home" class="active" >Home</a>
             </li>
             <li>
                 <a href="./index.html#who-am-i" data-link-to="who-am-i">¿Quien soy?</a>
@@ -273,7 +273,8 @@
                     <li class="form-group">
                         <input type="email" class="email" id="email" placeholder="Email"></li>
                     <li class="form-group">
-                        <select name="fuente" id="fuente">
+                        <label for="fuente">¿Como me  has conocido?</label>
+                        <select name="fuente" id="fuente" class="fuente">
                             <option value="google">Google+</option>
                             <option value="github">GitHub</option>
                             <option value="facebook">Facebook</option>
