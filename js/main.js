@@ -1,3 +1,5 @@
+import { FormContact } from './form-contact.js'
+
 export class Main {
     constructor () {
         
@@ -6,18 +8,18 @@ export class Main {
         this.aSections = document.querySelectorAll('section');
         this.oOffsets = [];
 
-        // objetos de formulario
+        /* objeto de formulario
         this.oFormContact = document.querySelector('#form-contact');
-        this.oInputName = document.querySelector('#name');
-        this.oInputEmail = document.querySelector('#email');
-        this.oSelectFuente = document.querySelector('#fuente');
-        this.oLiOtros = document.querySelector('#li-otros');
-        this.oInputOtros = document.querySelector('#otros');
-        this.oInputTel = document.querySelector('#phone-number');
-        this.oTextMessage = document.querySelector('#message');
+        this.oSelectFuente = document.querySelector('#fuente');*/
+        
+        // objetos de navegacion
         this.oMenuIcon = document.querySelector('#nav-icon');
         this.oNavMenu = document.querySelector('#nav-menu');
+        
+        (function(){ new FormContact().defineEventListeners()})();
     }
+
+    
 
     defineEventListeners() {
         
@@ -36,7 +38,9 @@ export class Main {
         });
 
         // eventos de formulario
-        this.oSelectFuente.addEventListener('change', this.toggleOtros.bind(this));
+        //this.oSelectFuente.addEventListener('change', this.toggleOtros.bind(this));
+        
+
 
         // desplegar nav-icon
         this.oMenuIcon.addEventListener('click', this.toggleMenu.bind(this));
@@ -140,8 +144,14 @@ export class Main {
 
     toggleMenu() {
         this.oNavMenu.classList.toggle('desplegado');
-        this.oNavMenu.classList.toggle('nav-menu');
+        //this.oNavMenu.classList.toggle('nav-menu');
         this.oNavMenu.classList.toggle('box-shadow-2');
     }
+
+  leerContact(oe) {
+    let form = new FormContact();  
+    oe.preventDefault();
+    form.guardarDatos();
+  }
 
 }

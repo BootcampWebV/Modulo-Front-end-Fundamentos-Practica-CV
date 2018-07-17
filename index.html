@@ -265,13 +265,13 @@
                     </ul>
                 </div>
             <p>También puedes rellenar el formulario para ponerte en contacto conmigo:</p>
-            <form action="" id="form-contact">
+            <form action="" id="form-contact" novalidate>
                 <ul>
                     <li class="form-group">
                         <input type="text" class="name" id="name" placeholder="*Nombre (campo obligatorio)" required>
                     </li>
                     <li class="form-group">
-                        <input type="email" class="email" id="email" placeholder="Email"></li>
+                        <input type="email" class="email" id="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$" placeholder="Email"></li>
                     <li class="form-group">
                         <label for="fuente">¿Como me  has conocido?</label>
                         <select name="fuente" id="fuente" class="fuente">
@@ -286,7 +286,7 @@
                         <input type="text" class="otros" id="otros" placeholder="Escribe aqui como me has conocido">
                     </li>
                     <li class="form-group">
-                        <input type="tel" class="phone-number" id="phone-number" placeholder="Número de contacto">
+                        <input type="tel" class="phone-number" id="phone-number" pattern="^\d{9}$" placeholder="Número de contacto">
                     </li>
                     <li class="form-group">
                         <textarea rows="5" class="message" id="message" placeholder="Introduce aquí el mensaje (máx. 150 palabras)"></textarea>

@@ -53,13 +53,19 @@ body>header {
     left: 1rem;
     top: 5rem;
     justify-content: center;
-    color: white;
-    background-color: darkgrey;
+    color: rgba(255,255,255,0.8);
+    background-color: rgba(70, 68, 68, 0.5);
 }
 
 a.active {
-    background-color: red;
-    color: yellow;
+    background-color: rgba(240,0,0,0.5);
+    color: rgba(239, 255, 11, 0.8);
+}
+
+.desplegado a {
+    display: block;
+    padding: .5rem 1rem;
+    transition: color, background-color .5s ease;
 }
 
 /* SECCIONES */
@@ -247,6 +253,7 @@ footer .footer-wrapper {
     .nav-menu {
         display: flex;
         position: fixed;
+        flex-direction: row;
         z-index: 1;
         font-weight: 800;
         font-size: 1rem;
@@ -255,22 +262,21 @@ footer .footer-wrapper {
         left: 0;
         justify-content: center;
         color: white;
-        background-color: rgba(0,0,0,.5);
+        background-color: grey;
     }
     
     .nav-menu li {
         display: inline-block;
         padding: 0.5rem 1rem;
-        transition: all 0.4s linear;
-    }
+        transition: all .5s ease;
+   }
     
     .nav-menu a {
         display: block;
-        padding: .5rem 1rem;
-        transition: all .5s ease;
+        /*transition: all .5s ease;*/
     }
    
-    .nav-menu a:hover {
+    .nav-menu li:hover {
         background-color: antiquewhite;
         color: darkblue;
         transform: scale(1.2);
