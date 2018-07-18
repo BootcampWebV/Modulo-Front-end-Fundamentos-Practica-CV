@@ -29,6 +29,8 @@ export class FormContact {
         this.oInputName.addEventListener('input', this.validaName.bind(this));
         this.oInputEmail.addEventListener('input', this.validaEmail.bind(this));
         
+        this.oSelectFuente.addEventListener('change', this.muestraOtros.bind(this));
+        
         //this.oFormContact.addEventListener('submit', this.leeFormContact.bind(this));
 }
 
@@ -76,6 +78,14 @@ export class FormContact {
             invalidMsg = 'El formato de Email no es vallido';
         }
         this.oInputEmail.setCustomValidity(invalidMsg);
+    }
+
+    muestraOtros(){
+        if (this.oSelectFuente.options[this.oSelectFuente.selectedIndex].value == 'otros') {
+            this.oInputOtros.parentElement.classList.remove('hidden');
+        } else {
+            this.oInputOtros.parentElement.classList.add('hidden');
+        }
     }
 }
 
