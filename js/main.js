@@ -5,7 +5,7 @@ export class Main {
 
     constructor(){
         
-        //this.oFormContact = new FormContact();
+        this.oFormContact = new FormContact();
 
         this.oNavigation = new Navigation();
         
