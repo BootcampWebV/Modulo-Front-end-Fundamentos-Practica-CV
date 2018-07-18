@@ -265,7 +265,7 @@
                     </ul>
                 </div>
             <p>También puedes rellenar el formulario para ponerte en contacto conmigo:</p>
-            <form action="" id="form-contact" novalidate>
+            <form action="" id="form-contact">
                 <ul>
                     <li class="form-group">
                         <input type="text" class="name" id="name" placeholder="*Nombre (campo obligatorio)" required>
@@ -289,7 +289,7 @@
                         <input type="tel" class="phone-number" id="phone-number" pattern="^\d{9}$" placeholder="Número de contacto">
                     </li>
                     <li class="form-group">
-                        <textarea rows="5" class="message" id="message" placeholder="Introduce aquí el mensaje (máx. 150 palabras)"></textarea>
+                        <textarea rows="5" class="message" id="message" pattern="^\\W*(?:\\w+\\b\\W*){0,150}$" placeholder="Introduce aquí el mensaje (máx. 150 palabras)"></textarea>
                     </li>
                     <li>
                         <button type="submit" class="send-button" id="send-button">Enviar</button>
