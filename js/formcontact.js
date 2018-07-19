@@ -62,7 +62,7 @@ export class FormContact {
 
     validaName(){
         let invalidMsg = '';
-        console.log('estoy ejecutando validaName');
+        
         this.oInputName.setCustomValidity('');
         if (!this.oInputName.checkValidity()){
             invalidMsg = 'El nombre es obligatorio';
