@@ -5,10 +5,13 @@ export class Main {
 
     constructor(){
         
-        this.oFormContact = new FormContact().defineEventListeners();
-
-        this.oNavigation = new Navigation().defineEventListeners();
+        //instancio clases desde modulos
+        this.oFormContact = new FormContact();
+        this.oNavigation = new Navigation();
         
+        //establezco manejadores de eventos de las clases
+        this.oFormContact.defineEventListeners();
+        this.oNavigation.defineEventListeners();
 
     }
 
