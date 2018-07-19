@@ -106,6 +106,12 @@ section .title-wrapper {
     margin-top: 1rem;
 }
 
+#who-am-i figure.quien-soy-foto {
+    width: 60%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
 #who-am-i div.personal-data {
     display: flex;
     flex-direction: column;
@@ -142,7 +148,7 @@ table.job-experience td:nth-child(2){
 }
 
 #about-me figure.video {
-    margin: 1rem 0 0 0;
+    margin: 2rem 0 2rem 0;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -155,6 +161,8 @@ table.job-experience td:nth-child(2){
 
 #about-me figure.image {
     width: 50%;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 #contact .content-wrapper p:nth-of-type(1) {
@@ -289,6 +297,11 @@ footer .footer-wrapper {
         max-width: 50rem;
     }
 
+    #who-am-i figure.quien-soy-foto {
+        width: 35%;
+        margin-left: auto;
+        margin-right: auto;
+    }
     
     #who-am-i div.personal-data {
         flex-direction: row;
@@ -300,15 +313,16 @@ footer .footer-wrapper {
     }
 
     #about-me figure.image {
-        width: 40%;
+        width: 25%;
+        margin: 0 2rem 1rem 0;
         float: left;
     }
-    
-    #about-me figure.image-2 {
-        width: 40%;
-        float: left;
+
+   #about-me figure.image-2 {
+        width: 33%;
+        float: right;
     }
-    
+
     div.clear-fix {
         clear: both;
     }
