@@ -25,9 +25,11 @@ export class FormContact {
     }
 
     defineEventListeners(){
-
+        //establezco manejadores para cada cambio en los campos a validar para cada vez tecleamos en el campo
         this.oInputName.addEventListener('input', this.validaName.bind(this));
         this.oInputEmail.addEventListener('input', this.validaEmail.bind(this));
+        this.oInputTel.addEventListener('input', this.validaTel.bind(this));
+        this.oTextMessage.addEventListener('input', this.validaMessage.bind(this));
         
         this.oSelectFuente.addEventListener('change', this.muestraOtros.bind(this));
         
@@ -78,6 +80,29 @@ export class FormContact {
             invalidMsg = 'El formato de Email no es vallido';
         }
         this.oInputEmail.setCustomValidity(invalidMsg);
+    }
+
+    validaTel(){
+        let invalidMsg = '';
+        
+        this.oInputTel.setCustomValidity(invalidMsg);
+        if (!this.oInputTel.checkValidity()){
+            invalidMsg = 'El formato de número de teléfono no es correcto';
+
+        this.oInputTel.setCustomValidity(invalidMsg);
+        }
+    }
+
+    validaMessage(){
+        let invalidMsg = '';
+        
+        this.oTextMessage.setCustomValidity(invalidMsg);
+        
+        if (this.oTextMessage.value.trim().split(' ').length  > 150 ){
+            invalidMsg = 'El mensaje no puede contener mas de 150 palabras';
+
+        this.oTextMessage.setCustomValidity(invalidMsg);
+        }
     }
 
     muestraOtros(){
