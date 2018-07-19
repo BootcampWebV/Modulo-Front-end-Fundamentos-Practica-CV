@@ -1,7 +1,7 @@
 export class FormContact {
 
     constructor(){
-        this.oFormContact = document.querySelector('#form-contact');
+        this.oForm = document.querySelector('#form-contact');
         this.oInputName = document.querySelector('#name');
         this.oInputEmail = document.querySelector('#email');
         this.oSelectFuente = document.querySelector('#fuente');
@@ -25,26 +25,27 @@ export class FormContact {
     }
 
     defineEventListeners(){
-        //establezco manejadores para cada cambio en los campos a validar para cada vez tecleamos en el campo
+        //manejadores para cada cambio en los campos a validar para cada vez tecleamos en el campo
         this.oInputName.addEventListener('input', this.validaName.bind(this));
         this.oInputEmail.addEventListener('input', this.validaEmail.bind(this));
         this.oInputTel.addEventListener('input', this.validaTel.bind(this));
         this.oTextMessage.addEventListener('input', this.validaMessage.bind(this));
         
+        //manejador para mostror campo "otros" cuando se escoja "otros" en select
         this.oSelectFuente.addEventListener('change', this.muestraOtros.bind(this));
         
-        //this.oFormContact.addEventListener('submit', this.leeFormContact.bind(this));
+        //manejador para submit en formulario
+        this.oForm.addEventListener('submit', this.leeFormContact.bind(this));
 }
 
     leeFormContact(oe){
         oe.preventDefault();
 
-        if (this.validaFormContact()) {
+        if (this.oForm.checkValidity()) {
             this.guardarDatos();
-        }
-        
-        console.log('el formulario no es valido');
-        
+            //this.oForm.submit();    
+            alert('Formulario enviado (esto seria un submit)');
+        }    
     }
 
     guardarDatos(){
@@ -56,14 +57,12 @@ export class FormContact {
             phone: this.oInputTel.value,
             message: this.oTextMessage.value
         }
-
-        this.oFormContact.submit();
-    
+        console.log(this.oDatos);
     }
 
     validaName(){
         let invalidMsg = '';
-
+        console.log('estoy ejecutando validaName');
         this.oInputName.setCustomValidity('');
         if (!this.oInputName.checkValidity()){
             invalidMsg = 'El nombre es obligatorio';
