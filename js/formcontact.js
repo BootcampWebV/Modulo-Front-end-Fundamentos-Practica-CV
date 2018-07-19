@@ -57,7 +57,7 @@ export class FormContact {
             phone: this.oInputTel.value,
             message: this.oTextMessage.value
         }
-        console.log(this.oDatos);
+        console.log(this.oData);
     }
 
     validaName(){
