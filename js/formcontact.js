@@ -98,7 +98,7 @@ export class FormContact {
         
         this.oTextMessage.setCustomValidity(invalidMsg);
         
-        if (this.oTextMessage.value.trim().split(' ').length  > 150 ){
+        if (this.oTextMessage.value.trim().split(' ').length  > 150){
             invalidMsg = 'El mensaje no puede contener mas de 150 palabras';
 
         this.oTextMessage.setCustomValidity(invalidMsg);
