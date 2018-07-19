@@ -17,11 +17,6 @@ export class FormContact {
             phone: this.oInputTel.value,
             message: this.oTextMessage.value
         }
-
-        this.defineEventListeners();
-
-
-        
     }
 
     defineEventListeners(){

@@ -13,11 +13,6 @@ export class Navigation {
 
         //establezco posicion inicial para scroll spy
         this.changeActiveMenuItem();
-
-        //defino manejadores de eventos
-        this.defineEventListeners();
-
-
     }
 
     defineEventListeners() {

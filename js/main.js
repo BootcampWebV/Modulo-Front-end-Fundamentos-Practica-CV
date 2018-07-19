@@ -5,9 +5,9 @@ export class Main {
 
     constructor(){
         
-        this.oFormContact = new FormContact();
+        this.oFormContact = new FormContact().defineEventListeners();
 
-        this.oNavigation = new Navigation();
+        this.oNavigation = new Navigation().defineEventListeners();
         
 
     }
