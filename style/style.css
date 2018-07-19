@@ -149,8 +149,12 @@ table.job-experience td:nth-child(2){
 }
 
 #about-me figure.video iframe{
-    width: 250px;
-    height: 141px;
+    width: 350px;
+    height: 250px;
+}
+
+#about-me figure.image {
+    width: 50%;
 }
 
 #contact .content-wrapper p:nth-of-type(1) {
@@ -199,14 +203,7 @@ footer .footer-wrapper {
     text-align: center;
 }
 
-@media screen and (min-width: 700px) {
-    #about-me figure.video iframe{
-        width: 560px;
-        height: 315px;
-        box-shadow: 10px 10px 5px grey;
-}
-
-@media screen and (min-width: 900px) {
+@media screen and (min-width: 940px) {
 
     /*TITULO PRINCIPAL*/
     body>header {
@@ -295,6 +292,11 @@ footer .footer-wrapper {
     
     #who-am-i div.personal-data {
         flex-direction: row;
+    }
+
+    #about-me figure.video iframe{
+        width: 450px;
+        height: 300px;
     }
 
     #about-me figure.image {
